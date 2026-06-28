@@ -1,0 +1,8 @@
+streamlit
+chromadb
+sentence-transformers
+langchain
+langchain-community
+langchain-openai
+requests
+radon
