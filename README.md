@@ -2,7 +2,7 @@
 
 Un assistant conversationnel **RAG** (Retrieval-Augmented Generation) capable d'analyser un repository logiciel et de répondre en langage naturel à des questions sur son code, sa documentation, son architecture et ses zones critiques.
 
-> **Cas d'usage :** Projet **Rafiki** — plateforme d'accompagnement scolaire pour la 2ème année baccalauréat (Maroc).  
+> **Cas d'usage :** Projet **Rafiki** — plateforme d'accompagnement scolaire pour la 2ème année baccalauréat (Maroc).  : https://github.com/SaadEl-bit/Rafiki
 > **Stack :** Python, LangChain, ChromaDB, Streamlit, sentence-transformers, cross-encoders, LLM multi-provider (NVIDIA / Groq / DeepSeek).
 
 ---
