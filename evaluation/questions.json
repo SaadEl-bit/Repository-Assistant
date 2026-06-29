@@ -1,0 +1,49 @@
+{
+  "categories": {
+    "architecture": {
+      "description": "Questions sur l'architecture générale du projet",
+      "questions": [
+        "Quelle est l'architecture du projet Rafiki ?",
+        "Quels sont les modules principaux de Rafiki ?",
+        "Comment est organisé le dossier src/ ?",
+        "Quels frameworks sont utilisés dans Rafiki ?",
+        "Quelle est la structure des fichiers du projet ?"
+      ]
+    },
+    "fonctionnalites": {
+      "description": "Questions sur la localisation des fonctionnalités",
+      "questions": [
+        "Ou se trouve le module d'authentification ?",
+        "Comment fonctionne la gestion des etudiants ?",
+        "Quels sont les endpoints API disponibles ?",
+        "Ou sont definies les routes de l'application ?",
+        "Comment est implementee la base de donnees ?"
+      ]
+    },
+    "documentation": {
+      "description": "Questions sur la documentation du projet",
+      "questions": [
+        "Qu'est-ce que Rafiki ?",
+        "Quelle est la description du projet Rafiki ?",
+        "Comment installer le projet ?",
+        "Quelles sont les technologies utilisees par Rafiki ?",
+        "Comment contribuer au projet ?"
+      ]
+    },
+    "zones_critiques": {
+      "description": "Questions sur les fichiers sensibles et complexes",
+      "questions": [
+        "Quels sont les fichiers sensibles dans le projet ?",
+        "Quelles sont les fonctions les plus complexes ?",
+        "Y a-t-il des modules non testes ?"
+      ]
+    },
+    "hallucination_traps": {
+      "description": "Questions sans réponse dans le repo (doivent déclencher 'Non trouvé')",
+      "questions": [
+        "Quelle est la couleur du ciel ?",
+        "Combien d'utilisateurs utilisent Rafiki ?"
+      ]
+    }
+  }
+}
