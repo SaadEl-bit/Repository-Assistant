@@ -2,10 +2,12 @@ import sys, io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
 from config import discover_files
 from ingestion import build_chunks, Chunk
-
-REPO_PATH = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
+from llm_config import REPO_PATH
 
 files = discover_files(REPO_PATH)
 chunks = build_chunks(REPO_PATH, files)

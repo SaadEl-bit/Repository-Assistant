@@ -1,8 +1,8 @@
 import sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-sys.path.insert(0, r"H:\Study\Projects\Assistant Repsitory\Repository-Assistant")
-
 from pathlib import Path
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
 from indexer import CHROMA_DB_DIR, COLLECTION_NAME, load_model
 import chromadb
 

@@ -2,8 +2,8 @@ import json
 import time
 from pathlib import Path
 from rag_chain import build_qa_chain
+from llm_config import REPO_PATH
 
-REPO_PATH = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
 QUESTIONS_PATH = Path(__file__).parent / "evaluation" / "questions.json"
 REPORT_PATH = Path(__file__).parent / "evaluation" / "evaluation_report.md"
 
