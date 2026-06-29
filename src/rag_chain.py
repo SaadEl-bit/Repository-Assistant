@@ -9,10 +9,10 @@ from langchain_core.retrievers import BaseRetriever
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-from src.config import discover_files
-from src.ingestion import build_chunks
-from src.indexer import CHROMA_DB_DIR, COLLECTION_NAME, EMBEDDING_MODEL, index_chunks, load_model
-from src.llm_config import get_llm
+from config import discover_files
+from ingestion import build_chunks
+from indexer import CHROMA_DB_DIR, COLLECTION_NAME, EMBEDDING_MODEL, index_chunks, load_model
+from llm_config import get_llm
 
 RELEVANCE_THRESHOLD = 0.80  # lenient: cross-encoder does the fine filtering
 USE_CROSS_ENCODER = True
@@ -150,6 +150,6 @@ def build_qa_chain(repo_path: Path, force_rebuild: bool = False):
 
 
 if __name__ == "__main__":
-    repo = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
-    qa = build_qa_chain(repo)
+    from llm_config import REPO_PATH
+    qa = build_qa_chain(REPO_PATH)
     print("QA chain ready.")

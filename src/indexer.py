@@ -5,10 +5,10 @@ from typing import List
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-from src.config import discover_files
-from src.ingestion import build_chunks, Chunk
+from config import discover_files
+from ingestion import build_chunks, Chunk
 
-CHROMA_DB_DIR = Path(__file__).parent / "chroma_db"
+CHROMA_DB_DIR = Path(__file__).resolve().parent.parent / "chroma_db"
 COLLECTION_NAME = "rafiki_chunks"
 EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 BATCH_SIZE = 100
@@ -91,5 +91,5 @@ def build_index(repo_path: Path, force_rebuild: bool = False):
 
 
 if __name__ == "__main__":
-    repo = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
-    build_index(repo, force_rebuild=True)
+    from llm_config import REPO_PATH
+    build_index(REPO_PATH, force_rebuild=True)

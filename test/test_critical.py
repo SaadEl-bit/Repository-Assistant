@@ -1,8 +1,10 @@
+import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+
 from indexer import load_model
 from critical_analysis import run_critical_analysis
-
-REPO_PATH = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
+from llm_config import REPO_PATH
 
 print("=" * 50)
 print("Phase 4 Validation: Critical Analysis Test")

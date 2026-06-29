@@ -3,7 +3,7 @@ import json
 import os
 import re
 from dataclasses import dataclass, field
-from src.config import EXCLUDE_DIR_PARTS, EXCLUDE_FILE_PARTS, INCLUDE_EXTENSIONS
+from config import EXCLUDE_DIR_PARTS, EXCLUDE_FILE_PARTS, INCLUDE_EXTENSIONS
 from pathlib import Path
 from typing import List, Optional
 

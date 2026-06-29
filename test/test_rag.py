@@ -1,12 +1,12 @@
 import sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-sys.path.insert(0, r"H:\Study\Projects\Assistant Repsitory\Repository-Assistant")
-
 from pathlib import Path
-from rag_chain import build_qa_chain
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-repo = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
-qa = build_qa_chain(repo)
+from rag_chain import build_qa_chain
+from llm_config import REPO_PATH
+
+qa = build_qa_chain(REPO_PATH)
 
 questions = [
     "Où est gérée l'authentification ?",

@@ -3,11 +3,10 @@ from pathlib import Path
 
 import streamlit as st
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from src.rag_chain import build_qa_chain
-
-REPO_PATH = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
+from rag_chain import build_qa_chain
+from llm_config import REPO_PATH
 
 
 @st.cache_resource

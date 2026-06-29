@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 
 
-env_path = Path(__file__).parent / ".env"
+env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(dotenv_path=env_path)
 
 NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY")
@@ -12,6 +12,13 @@ MODEL_NAME = os.getenv("MODEL_NAME")
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
+
+REPO_PATH = Path(os.getenv("REPO_PATH", ""))
+if not REPO_PATH.exists():
+    raise ValueError(
+        f"REPO_PATH not found: {REPO_PATH}. "
+        "Set REPO_PATH in .env to the absolute path of the repository to analyze."
+    )
 
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"

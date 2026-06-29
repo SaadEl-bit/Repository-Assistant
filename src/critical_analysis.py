@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import List
 
 from ingestion import Chunk, _make_id
+from llm_config import REPO_PATH
 
 SENSITIVE_KEYWORDS = [
     'password', 'secret', 'token', 'api_key', 'private_key',
@@ -14,7 +15,6 @@ TOKEN_PATTERN = re.compile(r'[A-Za-z0-9_\-\.]{32,}')
 URL_PATTERN = re.compile(r'https?://[^\s"\'\)]+')
 
 COMPLEXITY_THRESHOLD = 10
-REPO_PATH = Path(r"H:\Study\Projects\Assistant Repsitory\Rafiki")
 
 
 # ---------------------------------------------------------------------------
